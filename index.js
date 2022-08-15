@@ -22,7 +22,7 @@ let curPos = 0;
 
 
 
-function createDots() {
+const createDots = () => {
 	for (let i = 0; i < slideLength; i++) {
 		let dot = document.createElement("li");
 		dot.classList.add("dot")
@@ -32,7 +32,7 @@ function createDots() {
 createDots()
 
 
-function nextSlide() {
+const nextSlide = () => {
 	move_distance = -(current_index * sliderWrapper);
 	last_index = current_index;
 
@@ -47,7 +47,7 @@ function nextSlide() {
 }
 
 
-function prevSlide() {
+const prevSlide = () => {
 	if (current_index > 1) {
 		last_index = current_index;
 		current_index--;
@@ -59,11 +59,10 @@ function prevSlide() {
 	}
 
 	slideImages();
-	console.log("다음")
 }
 
 
-function slideImages() {
+const slideImages = () => {
 	clearInterval(timer);
 
 	const distance = move_distance;
@@ -76,7 +75,7 @@ function slideImages() {
 }
 
 
-function slideDotImages(e) {
+const slideDotImages = (e) => {
 	const nodes = [...e.target.parentElement.children];
 	const index = nodes.indexOf(e.target) + 1;
 	if (e.target.classList == `dot`) {
@@ -89,7 +88,7 @@ function slideDotImages(e) {
 }
 
 
-function init() {
+const init = () => {
 	document.querySelector(`.dot:nth-child(${current_index})`).classList.remove('on')
 
 	sliderWrapper = document.querySelector('.slider-wraper').clientWidth;
