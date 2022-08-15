@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.slider-wraper {
+  position: relative;
+  height: 500px;
+  width: 100vw;
+  overflow: hidden;
+}
+.slider-wraper .slider {
+  transition: transform 1s;
+}
+.slider-wraper .slider .slide {
+  float: left;
+  height: 500px;
+  width: 100vw;
+}
+.slider-wraper .slider-btns .arrow {
+  position: absolute;
+  top: 40%;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 18px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.slider-wraper .slider-btns .arrow:hover {
+  transform: scale(1.2);
+}
+.slider-wraper .slider-btns .arrow.prev {
+  left: 25px;
+}
+.slider-wraper .slider-btns .arrow.next {
+  right: 25px;
+}
+.slider-wraper .slider-btns .slider-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+}
+.slider-wraper .slider-btns .slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: #ddd;
+  cursor: pointer;
+}
+.slider-wraper .slider-btns .slider-dots .dot.on {
+  background: #000;
+}
+.slider-wraper .slide:first-child {
+  background: url("https://picsum.photos/id/220/1400/800") no-repeat center center/cover;
+}
+.slider-wraper .slide:nth-child(2) {
+  background: url("https://picsum.photos/id/221/1400/800") no-repeat center center/cover;
+}
+.slider-wraper .slide:nth-child(3) {
+  background: url("https://picsum.photos/id/222/1400/800") no-repeat center center/cover;
+}
+.slider-wraper .slide:nth-child(4) {
+  background: url("https://picsum.photos/id/228/1400/800") no-repeat center center/cover;
+}
+.slider-wraper .slide:nth-child(5) {
+  background: url("https://picsum.photos/id/225/1400/800") no-repeat center center/cover;
+}
+
+/*# sourceMappingURL=index.css.map */
